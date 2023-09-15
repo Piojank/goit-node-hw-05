@@ -15,7 +15,7 @@ router.get("/current", auth, usersTask.getCurrent);
 
 router.get("/logout", auth, usersTask.logOut);
 
-router.patch("/update-subscription/:userId", auth, validation(joiSubscriptionSchema), usersTask.updateSubscriptionUser);
+router.patch("/update-subscription/:userId", auth, validation(joiSubscriptionSchema), usersTask.updateStatusUser);
 
 router.patch("/avatars", auth, validateUpload, multerTasks)
 
