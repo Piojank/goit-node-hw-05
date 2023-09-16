@@ -3,7 +3,7 @@ const fs = require("fs").promises;
 const Jimp = require("jimp");
 const userService = require("../service/usersService");
 
-const avatarsDir = path.join(__dirname, '../../', 'public', 'avatars')
+const avatarsDir = path.join(__dirname, '..', 'public', 'avatars')
 
 const resizeAvatar = async (fileName, avatarName) => {
     const image = await Jimp.read(fileName);
